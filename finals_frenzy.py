@@ -8,7 +8,7 @@ days_left = (((finals - today).days) - 1)
 
 sender = 'insert bot account email here'
 receiver = open('mail list.txt').readlines()
-password = 'insert bot account email here'
+password = 'insert bot account password here'
 
 reminder = EmailMessage()
 if days_left > 1:
@@ -22,6 +22,3 @@ with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
     server.login(sender, password)
     server.send_message(reminder)
     server.quit()
-
-# C:\Program Files\Python311\python.exe
-# C:\Users\CC\PycharmProjects\finals reminder\main.py
